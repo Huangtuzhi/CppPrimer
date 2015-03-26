@@ -11,7 +11,7 @@ using namespace std;
 
 bool Morechars(string str)
 {
-	return str.size() >=5 ? true : false;
+	return str.size() >=5;
 }
 
 int main()
