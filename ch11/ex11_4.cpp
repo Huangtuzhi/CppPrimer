@@ -1,7 +1,9 @@
 #include <map>
 #include <set>
 #include <iostream>
-
+#include <string>
+#include <algorithm>
+#include <cctype>
 using namespace std;
 
 int main()
@@ -10,7 +12,9 @@ int main()
 	set<string> exclude_word = {"The", "but", "the"};
 	string word;
 	while (cin >> word){
-		string in_word = transform(word.begin(), word.end(), word.begin(), tolower);  
+		for(auto &ch : word)
+			ch = tolower(ch);
+		word.erase(remove_if(word.begin(), word.end(), ::ispunct), word.end());
 		if (exclude_word.find(word) == exclude_word.end())
 			word_count[word]++;
 	}
