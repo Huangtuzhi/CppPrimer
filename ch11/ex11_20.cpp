@@ -19,6 +19,7 @@ int main()
             ++ret.first->second;
     }
 
+
     for(auto i: word_count)
         cout << i.first << i.second << endl;
 }
