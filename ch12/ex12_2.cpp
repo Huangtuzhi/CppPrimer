@@ -26,10 +26,21 @@ public:
     return data->front();
     }
 
+    const string& front() const{
+    check(0, "front on empty StrBob");
+    return data->front();       
+    }
+
     string& back(){
     check(0, "back on empty StrBob");
     return data->back();
     }
+
+    const string& back() const{
+    check(0, "back on empty StrBob");
+    return data->back();
+    }
+
 
 private:
     shared_ptr<vector<string>> data;
