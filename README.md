@@ -1,6 +1,6 @@
 ##C++ Primer 5 Answers
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)]()
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](tuzhii.com)
 
 ### Note
 
