@@ -1,5 +1,7 @@
 ##C++ Primer 5 Answers
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)]()
+
 ### Note
 
 - Use `-std=c++11`(optional: `-pedantic -Wall`) flag when compiling, g++ -std=c++11 -o out template.cc.
