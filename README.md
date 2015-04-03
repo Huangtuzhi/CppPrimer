@@ -1,20 +1,9 @@
 ##C++ Primer 5 Answers
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pezy/Cpp-Primer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 ### Note
 
-- Use `-std=c++11`(optional: `-pedantic -Wall`) flag when compiling.(or you can use Visual Studio 2012+)
-- If you found any bug, please [let me know](https://github.com/Mooophy/Cpp-Primer/issues/new), thanks.
-- I have downloaded the headers from this book's [web site](http://www.informit.com/store/c-plus-plus-primer-9780321714114) and put them in the `include` folder.
-- In order to test the program in an efficient way, I also put the test data file in the `data` folder.
-
-### How to contribute
-
-- Please **fork**([How?](https://help.github.com/articles/fork-a-repo)) this repository first.
-- **Commit**([How?](https://help.github.com/articles/create-a-repo#commit-your-first-change)) in your own repository.
-- Give me a **pull request**([How?](https://help.github.com/articles/using-pull-requests)).
-- Syncing with([How?](https://help.github.com/articles/syncing-a-fork/)) the origin repository. This is very **important** because this repo updates frequently.
+- Use `-std=c++11`(optional: `-pedantic -Wall`) flag when compiling, g++ -std=c++11 -o out template.cc.
+- All code sources of this book can be achieved from [web site](http://www.informit.com/store/c-plus-plus-primer-9780321714114).
 
 ### Table of Contents
 
