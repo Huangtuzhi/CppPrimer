@@ -19,36 +19,37 @@ public:
     map<int, string> LineContent;
 };
 
-
 class TextQuery
 {
 public:
-    TextQuery(ifstream& input): infile(input)
-    {
-        int lineid = 1;
-        string line, word;
-        while(getline(input, line))
-        {
-           TextInfo.push_back(line);
-           istringstream record(line);
-           while(record >> word)
-           {
-                WordInfo[word].insert(lineid);
-           }
-           lineid++;
-        }   
-    }
+    TextQuery(ifstream& input);
     ~TextQuery(){}; 
 
     bool query(string s);
     void print();
 
 private:
-    ifstream &infile;
+    //ifstream &infile;
     vector<string> TextInfo;
     map<string, set<int> > WordInfo;
     QueryResult result;
 };
+
+TextQuery::TextQuery(ifstream& input)
+{ 
+    int lineid = 1;
+    string line, word;
+    while(getline(input, line))
+    {
+       TextInfo.push_back(line);
+       istringstream record(line);
+       while(record >> word)
+       {
+            WordInfo[word].insert(lineid);
+       }
+       lineid++;
+    }  
+}
 
 bool TextQuery::query(string s)
 {
@@ -73,7 +74,6 @@ void TextQuery::print()
     for(auto i: result.ShowLine)
     cout << "  (line " << i << ") " << result.LineContent[i] << endl;
 }
-
 
 void runQueries(ifstream& infile)
 {
