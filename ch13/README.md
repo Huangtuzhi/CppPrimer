@@ -13,3 +13,8 @@
 ## [Exercise 13.5](ex13_5.cpp)
 
 ## [Exercise 13.8](ex13_8.cpp)
+注意赋值运算符里先释放了要赋值的对象的空间。
+```
+string* new_ps = new string(*rhs.ps);
+delete ps;
+```
