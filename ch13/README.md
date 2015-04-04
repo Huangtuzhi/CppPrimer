@@ -18,3 +18,5 @@
 string* new_ps = new string(*rhs.ps);
 delete ps;
 ```
+
+## [Exercise 13.11](ex13_11.cpp)
