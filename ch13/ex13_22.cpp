@@ -19,6 +19,9 @@ public:
     HasPtr& operator=(const HasPtr&);
     void Printvari(){cout << *ps << " " << i << endl; }
 
+    ~HasPtr(){
+        delete ps;
+    }
 private:
     string* ps;
     int i;
@@ -32,8 +35,12 @@ HasPtr::HasPtr(const HasPtr& orig)
 
 HasPtr& HasPtr::operator=(const HasPtr& rhs)
 {
+    auto new_p = new string(*rhs.ps);
+    delete ps; //删除之前的资源,比如下面的Old("tuzhi")
+    this->ps = new_p; 
     this->i = rhs.i; 
-    this->ps = new string(*rhs.ps);
+    return *this;
+    
 }
 
 int main()
@@ -41,7 +48,11 @@ int main()
     HasPtr p("Huangyi");
     p.Printvari();
 
-    HasPtr q = p;
-    q.Printvari();
+    //HasPtr Old("tuzhi");
+    //Old = p;
+    //Old.Printvari();
+    //p.Printvari();
+
+    HasPtr a;
     return 0;
 }
