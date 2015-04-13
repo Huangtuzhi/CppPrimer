@@ -34,3 +34,6 @@ delete ps;
 
 ## [Exercise 13.17](ex13_17.cpp)
 
+## [Exercise 13.18](ex13_18.cpp)
+
+## [Exercise 13.22](ex13_22.cpp)
