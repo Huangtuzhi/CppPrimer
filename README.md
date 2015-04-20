@@ -29,4 +29,4 @@
 - Part IV:  Advanced Topics
   - [Chapter 17. Specialized Library Facilities](ch17/README.md)
   - [Chapter 18. Tools for Large Programs](ch18/README.md)
-  - Chapter 19. Specialized Tools and Techniques
+  - Chapter 19. Specialized Tools and Techniques 
