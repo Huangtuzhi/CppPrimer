@@ -48,11 +48,13 @@ int main()
     HasPtr p("Huangyi");
     p.Printvari();
 
-    //HasPtr Old("tuzhi");
-    //Old = p;
-    //Old.Printvari();
-    //p.Printvari();
+    p = p;
+    p.Printvari();
 
-    HasPtr a;
+    // HasPtr Old("tuzhi");
+    // Old = p;
+    // Old.Printvari();
+    // p.Printvari();
+
     return 0;
 }
