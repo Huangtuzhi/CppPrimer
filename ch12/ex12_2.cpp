@@ -54,5 +54,10 @@ int main()
     Blob.push_back("huangyi");
     cout << "front :" << Blob.front() << endl;
     cout << "size :" << Blob.size() << endl;
+
+    StrBlob Blob2 = Blob;
+    cout << "front :" << Blob2.front() << endl;
+    cout << "size :" << Blob2.size() << endl;
+
     return 0;
 }
