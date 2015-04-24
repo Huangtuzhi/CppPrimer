@@ -1,5 +1,7 @@
 # Chapter 12. Dynamic Memory
 
+##[Exercise 12.2](ex12_2.cpp)
+
 ## Exercise 12.27
 在TextQuery和QueryResult类中直接实例化map，vector等。
 
