@@ -3,6 +3,8 @@
 ##[Exercise 12.2](ex12_2.cpp)
 StrBlob这个类的目的是用来保存一组string，内部实现用了STL的vector。Blob对象的不同拷贝之间共享相同的元素。
 
+##[Exercise 12.19](ex12_19.cpp)
+
 ## Exercise 12.27
 在TextQuery和QueryResult类中直接实例化map，vector等。
 

@@ -3,19 +3,14 @@
 #include <memory>
 #include <iostream>
 #include <initializer_list>
-
+#include <exception>
 using namespace std;
 
 class StrBlobPtr;
+
 class StrBlob
 {
     friend class StrBlobPtr;
-    StrBlobPtr begin() { return StrBlobPtr(*this); }
-    StrBlobPtr end() 
-    {
-        auto ret = StrBlobPtr(*this, data->size());
-        return ret;
-    }
 public:
     StrBlob(): data(make_shared<vector<string>>()) { }
     StrBlob(initializer_list<string> il): 
@@ -27,9 +22,27 @@ public:
 
     string& front();
     string& back();
+
+    StrBlobPtr begin();
+    StrBlobPtr end();
 private:
     shared_ptr<vector<string>> data;
     void check(int i, const string& msg) const;
+};
+
+//class要接着写在后面
+class StrBlobPtr
+{
+public:
+    StrBlobPtr(): curr(0) { }
+    StrBlobPtr(StrBlob &a, size_t sz = 0):
+            wptr(a.data), curr(sz) { }
+    string& deref() const;
+    StrBlobPtr& incr();
+private:
+    shared_ptr<vector<string>> check(size_t i, const string& msg) const;
+    weak_ptr<vector<string>> wptr;
+    size_t curr;
 };
 
 void StrBlob::check(int i, const string& msg) const
@@ -56,23 +69,19 @@ void StrBlob::pop_back()
     data->pop_back();
 }
 
-class StrBlobPtr
+StrBlobPtr StrBlob::begin() 
 {
-public:
-    StrBlobPtr(StrBlob &a): curr(0) { }
-    StrBlobPtr(StrBlob &a, size_t sz = 0):
-            wptr(a.data), curr(sz) { }
-    string& deref() const;
-    StrBlobPtr& incr();
-private:
-    shared_ptr<vector<string>> check(size_t i, const string& msg) const;
-    weak_ptr<vector<string>> wptr;
-    size_t curr;
-};
+    return StrBlobPtr(*this); //调用无参构造函数
+}
+
+StrBlobPtr StrBlob::end()
+{
+    return StrBlobPtr(*this, data->size()); //调用第二个构造函数
+}
 
 //用来检查vector是否还存在
 shared_ptr<vector<string>> StrBlobPtr::check(size_t i, const string& msg) const
-{//第二个arg必须加const
+{
     auto ret = wptr.lock();
     if(!ret)
         throw runtime_error("unbounded StrBlobPtr");
@@ -105,10 +114,9 @@ int main()
     cout << "front :" << Blob2.front() << endl;
     cout << "size :" << Blob2.size() << endl;
 
-    //cout << Blob.begin().deref();
-
+    cout << Blob.begin().deref()<< endl;
+    cout << Blob.begin().incr().deref()<< endl;
+    cout << Blob.begin().incr().incr().deref()<< endl;
+    cout << Blob.begin().incr().incr().incr().deref()<< endl;
     return 0;
 }
-
-
-
