@@ -5,6 +5,8 @@ StrBlob这个类的目的是用来保存一组string，内部实现用了STL的v
 
 ##[Exercise 12.19](ex12_19.cpp)
 
+##[Exercise 12.20](ex12_20.cpp)
+
 ## Exercise 12.27
 在TextQuery和QueryResult类中直接实例化map，vector等。
 
