@@ -43,5 +43,11 @@ HasPtr未定义析构函数会导致内存泄漏。
 未定义拷贝构造函数，指针可能会指向多个对象，析构时多次删除指针。
 
 ## Exercise 13.25
+拷贝构造函数和拷贝赋值运算符应该动态为它自己分配内存，而不是和共享对象。
 
+StrBlob不需要构造函数原因：智能指针管理动态内存，当计数为0会自动释放内存。
+
+StrBlob is using smart pointers which can be managed with synthesized destructor, If an object of StrBlob is out of scope, the destructor for std::shared_ptr will be called automatically to free the memory dynamically allocated when the use_count goes to 0.
+
+## [Exercise 13.26](ex13_26.cpp)
 
