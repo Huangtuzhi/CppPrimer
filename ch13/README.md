@@ -60,3 +60,5 @@ StrBlob is using smart pointers which can be managed with synthesized destructor
 swap(HasPtr& lhs, HasPtr& rhs)中的参数是引用类型。
 
 ## [Exercise 13.30](ex13_30.cpp)
+
+## [Exercise 13.31](ex13_31.cpp)
