@@ -67,3 +67,5 @@ swap(HasPtr& lhs, HasPtr& rhs)中的参数是引用类型。
 因为需要对传进来的参数Folder进行修改。
 
 ## [Exercise 13.34](ex13_34.cpp)
+
+## [Exercise 13.36](ex13_36.cpp)
