@@ -51,3 +51,8 @@ StrBlob is using smart pointers which can be managed with synthesized destructor
 
 ## [Exercise 13.26](ex13_26.cpp)
 
+## [Exercise 13.27](ex13_27.cpp)
+注意处理自赋值
+
+## [Exercise 13.28](ex13_28.cpp)
+
