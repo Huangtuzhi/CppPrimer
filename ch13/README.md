@@ -76,4 +76,5 @@ swap(HasPtr& lhs, HasPtr& rhs)中的参数是引用类型。
 
 ## Exercise 13.42 [.h](ex13_42.h) | [.cpp](ex13_42.cpp)
 
+## [Exercise 13.44](ex13_44.cpp)
 
