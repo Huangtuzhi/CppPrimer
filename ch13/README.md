@@ -89,4 +89,4 @@ swap(HasPtr& lhs, HasPtr& rhs)中的参数是引用类型。
 
 ##  Exercise 13.extra [.h](ex13_mempool.h) | [.cpp](ex13_TestClass.cpp)
 实现C++内存池，见
-
+[博客](http://tuzhii.com/2015/05/06/memorypool)
