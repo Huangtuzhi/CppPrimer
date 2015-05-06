@@ -87,3 +87,6 @@ swap(HasPtr& lhs, HasPtr& rhs)中的参数是引用类型。
 - 左值持久，右值短暂
 - 右值引用指向将要被销毁的对象。因此，使用右值引用的代码可以自由地接管所引用对象的资源。
 
+##  Exercise 13.extra [.h](ex13_mempool.h) | [.cpp](ex13_TestClass.cpp)
+实现C++内存池，见
+
