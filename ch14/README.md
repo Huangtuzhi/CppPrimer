@@ -10,6 +10,18 @@
 - (g) == 对称     非成员
 - (h) ()         成员
 
+<<定义为非成员的例子
+
+```
+ostream& operator<<(ostream& os, const Sales_data& item)
+{
+	os << item.isbn() << " " << item.units_sold << " "
+	   << item.revenue << " " << item.avg_price();
+	return os;
+}
+
+```
+注意第一个形参是非const ostream对象的引用，定义为非const的原因是向流写入内容会改变其状态;第二个形参是const引用，定义为const的原因是因为打印对象不会改变对象的内容。
 
 
 ## [Exercise 13.5](ex13_5.cpp)
