@@ -25,5 +25,5 @@ ostream& operator<<(ostream& os, const Sales_data& item)
 
 ## [Exercise 14.6](ex14_6.cpp)
 
-
+## [Exercise 14.7](ex14_7.cpp)
 
