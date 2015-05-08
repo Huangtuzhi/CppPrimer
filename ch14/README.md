@@ -30,13 +30,15 @@ ostream& operator<<(ostream& os, const Sales_data& item)
 ## [Exercise 14.9](ex14_6.cpp)
 
 ## Exercise 14.14
-operator+需要两个参数，需要一个临时变量。
+operator+需要两个参数，需要一个临时对象。
 
 operator+=只需要一个参数，在this对象上作更改。
 
 见[SO](http://stackoverflow.com/questions/21071167/why-is-it-more-efficient-to-define-operator-to-call-operator-rather-than-the)。
 
 ## [Exercise 14.16](ex14_16.cpp)
+
+## [Exercise 14.23](ex14_23.cpp)
 
 
 
