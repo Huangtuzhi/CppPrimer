@@ -40,5 +40,11 @@ operator+=只需要一个参数，在this对象上作更改。
 
 ## [Exercise 14.23](ex14_23.cpp)
 
+## [Exercise 14.34](ex14_34.cpp)
+
+## [Exercise 14.35](ex14_35.cpp)
+
+## [Exercise 14.36](ex14_36.cpp)
+
 
 
