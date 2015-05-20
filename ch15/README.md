@@ -32,3 +32,11 @@ istream &read(istream &is, Sales_data &item)
 ifstream input(argv[1])的ifstream类型是istream的派生类。
 
 ## [Exercise 15.11](ex15_11.cpp)
+
+## [Exercise 15.15](ex15_15.cpp)
+
+## Exercise 15.17
+
+> cannot declare variable ‘error_class’ to be of abstract type ‘Disc_quote’ because the following virtual functions are pure within ‘Disc_quote’ 
+
+
