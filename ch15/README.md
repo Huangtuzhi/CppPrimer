@@ -39,4 +39,8 @@ ifstream input(argv[1])的ifstream类型是istream的派生类。
 
 > cannot declare variable ‘error_class’ to be of abstract type ‘Disc_quote’ because the following virtual functions are pure within ‘Disc_quote’ 
 
+## [Exercise 15.19](ex15_19.cpp)
+
+
+
 
