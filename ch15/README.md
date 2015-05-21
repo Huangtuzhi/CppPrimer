@@ -41,6 +41,17 @@ ifstream input(argv[1])的ifstream类型是istream的派生类。
 
 ## [Exercise 15.19](ex15_19.cpp)
 
+## Exercise 15.24
+删除的是一个指向派生类的对象的基类指针，则需要虚析构函数。基类需要虚析构函数。
 
+虚析构函数应该执行派生类对象的销毁。
 
+## Exercise 15.25
+带4个参数的构造函数定义之后，会阻止编译器合成默认构造函数`Bulk_quote()`，后果就是不能这样使用：
 
+```
+Bulk_quote B;
+```
+会报错
+
+> error: no matching function for call to ‘Bulk_quote::Bulk_quote()
