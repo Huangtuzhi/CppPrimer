@@ -55,3 +55,5 @@ Bulk_quote B;
 会报错
 
 > error: no matching function for call to ‘Bulk_quote::Bulk_quote()
+
+## [Exercise 15.26](ex15_26.cpp)
