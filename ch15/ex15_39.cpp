@@ -46,12 +46,12 @@ class Query
 public:
     Query(const string &s): q(new WordQuery(s)) { }
     QueryResult eval(const TextQuery& t) const
-    { return q->eval(t); }
+    { return q->eval(t); } //同名字，调用虚函数，动态绑定。
     string rep() const
     { return q->rep(); }
 private:
     Query(shared_ptr<Query_base> query): q(query) {}
-    shared_ptr<Query_base> q;
+    shared_ptr<Query_base> q; //q指向新建的继承类TextQuery
 };
 
 class NotQuery: public Query_base
