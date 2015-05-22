@@ -68,4 +68,4 @@ Bulk_quote B;
 ## Exercise 15.39:
 
 [cpp](ex15_39.cpp) | [hpp](ex15_39_TextQuery.h)|
-[cpp](ex15_39_TextQuery.cpp) | [Txt](ex15_39_story.txt)
+[cpp](ex15_39_TextQuery.cpp) | [txt](ex15_39_story.txt)
