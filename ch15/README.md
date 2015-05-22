@@ -61,3 +61,5 @@ Bulk_quote B;
 ## [Exercise 15.29](ex15_29.cpp) 
 
 ## [Exercise 15.30](ex15_30.cpp) 
+
+## [Exercise 15.35](ex15_35.cpp) 
